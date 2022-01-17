@@ -1,0 +1,27 @@
+.search,
+.search:focus {
+  outline: none;
+  box-shadow: unset;
+  border: none;
+  caret-color: var(--primaryColor);
+  color: var(--inputColor);
+}
+
+.btn-outline-success {
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+  box-shadow: unset !important;
+}
+
+.btn-outline-success:hover {
+  color: var(--colorLight);
+  background-color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+
+.shiftDown{
+  padding-top: 20px;
+}
+.contactcount{
+  text-align: right;
+}
