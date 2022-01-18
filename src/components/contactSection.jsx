@@ -2,7 +2,6 @@ import "../styles/contactsList.css";
 import ContactNav from "./contactNav";
 import Contacts from "./contactsList";
 import { useState, useEffect } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
 
 const ContactSection = () => {
   const [userData, setUserData] = useState([]);
@@ -16,6 +15,7 @@ const ContactSection = () => {
 
   const url = "https://stoplight.io/mocks/chatdaddy/openapi/15107977/contacts";
   const token = "velit aliqua Excepteur Duis eiusmod";
+  
   useEffect(() => {
     async function getData() {
       try {
@@ -46,28 +46,6 @@ const ContactSection = () => {
     getData();
   }, []);
 
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   const sectionStyle = {
     height: "95vh",
     marginTop: "15px",
@@ -84,7 +62,7 @@ const ContactSection = () => {
       />
 
       <Contacts
-        userDetails={userData}
+        userDetails={[userData, setUserData]}
         loadingSet={loading}
         errorSet={error}
         searchState={search}

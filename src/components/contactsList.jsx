@@ -1,21 +1,10 @@
 import { ListGroup, Container, Spinner, Col } from "react-bootstrap";
-
 import badNetwork from "../assets/badNetwork.png";
 
-const Contacts = ({ userDetails, loadingSet, errorSet, searchState }) => {
-  const userData = userDetails;
+const Contacts = ({ userDetails, loadingSet, errorSet }) => {
+  const [userData, setUserData] = userDetails;
   const loading = loadingSet;
   const error = errorSet;
-  const search = searchState;
-
-  // const data = userData.map(({ type }) => type)
-  // const filterLogic = !search
-  //   ? data
-  //   : data.filter((user) =>
-  //       user.toLowerCase().startsWith(search.toLowerCase())
-  //     );
-
-  //     console.log(filterLogic);
 
   return (
     <Container className="contacts">
